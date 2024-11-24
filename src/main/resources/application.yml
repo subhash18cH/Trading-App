@@ -9,9 +9,9 @@ spring:
     timeout-per-shutdown-phase: 30s
 
   datasource:
-    url: jdbc:mysql://localhost:3306/mytradeapp
-    username: springstudent
-    password: springstudent
+    url: jdbc:mysql://localhost:3306/*
+    username: *
+    password: *
   jpa:
     hibernate:
       ddl-auto: update
@@ -27,8 +27,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: 9977subhashchand@gmail.com
-    password: llfafvelnbqrchpv
+    username: *
+    password: *
     properties:
       mail:
         smtp:
