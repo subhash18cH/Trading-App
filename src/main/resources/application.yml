@@ -1,0 +1,54 @@
+server:
+  shutdown: graceful
+  port: 8080
+spring:
+  application:
+    name: trade_web_backend
+
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mytradeapp
+    username: springstudent
+    password: springstudent
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    hikari:
+      maximum-pool-size: 10
+      pool-name: HikariPool-1
+      auto-commit: true
+
+  jwt:
+    expiration: 172800000
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 9977subhashchand@gmail.com
+    password: llfafvelnbqrchpv
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+logging:
+  level:
+    com.zaxxer.hikari: DEBUG
+
+    org:
+      hibernate:
+        SQL: DEBUG
+
+stripe:
+  api:
+    key: stripe key
+
+razorpay:
+  api:
+    key: rzp_test_BbLmkBVuQvM5Zt
+    secret: KFtSHEnlNO3BddjweGF6UsNl
