@@ -1,1 +1,1 @@
-This is a simple trading app
+This is a simple trading API
